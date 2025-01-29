@@ -1,0 +1,70 @@
+\hypertarget{classbridge_1_1image__converter}{}\doxysection{bridge.\+image\+\_\+converter Class Reference}
+\label{classbridge_1_1image__converter}\index{bridge.image\_converter@{bridge.image\_converter}}
+
+
+A R\+OS node that subscribes to an image stream, processes the image to detect a line, and publishes velocity commands to follow the line.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbridge_1_1image__converter_af36dc9cac017dab0c1592edbd07f31c7}\label{classbridge_1_1image__converter_af36dc9cac017dab0c1592edbd07f31c7}} 
+def \mbox{\hyperlink{classbridge_1_1image__converter_af36dc9cac017dab0c1592edbd07f31c7}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor\+: Initializes the image converter, subscribes to the camera topic, and sets up the velocity publisher. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridge_1_1image__converter_a3ba534b29b3887b5febe991889ff8a28}{callback}} (self, data)
+\begin{DoxyCompactList}\small\item\em Callback function that processes the incoming image and extracts the line. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridge_1_1image__converter_a1bed03da68d71c82612139b89df1e902}{publish\+\_\+velocity}} (self, error)
+\begin{DoxyCompactList}\small\item\em Computes and publishes velocity commands based on the detected line position error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbridge_1_1image__converter_a24f74cfd71a58ba2833f1192ac6c5996}\label{classbridge_1_1image__converter_a24f74cfd71a58ba2833f1192ac6c5996}} 
+{\bfseries bridge}
+\item 
+\mbox{\Hypertarget{classbridge_1_1image__converter_a40c931a15d161b4125d69040cd626215}\label{classbridge_1_1image__converter_a40c931a15d161b4125d69040cd626215}} 
+{\bfseries image\+\_\+sub}
+\item 
+\mbox{\Hypertarget{classbridge_1_1image__converter_a8df8ee30d74078d65a2c94fc8251b7ea}\label{classbridge_1_1image__converter_a8df8ee30d74078d65a2c94fc8251b7ea}} 
+{\bfseries vel\+\_\+pub}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A R\+OS node that subscribes to an image stream, processes the image to detect a line, and publishes velocity commands to follow the line. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridge_1_1image__converter_a3ba534b29b3887b5febe991889ff8a28}\label{classbridge_1_1image__converter_a3ba534b29b3887b5febe991889ff8a28}} 
+\index{bridge.image\_converter@{bridge.image\_converter}!callback@{callback}}
+\index{callback@{callback}!bridge.image\_converter@{bridge.image\_converter}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily def bridge.\+image\+\_\+converter.\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Callback function that processes the incoming image and extracts the line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The incoming image data from the camera. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridge_1_1image__converter_a1bed03da68d71c82612139b89df1e902}\label{classbridge_1_1image__converter_a1bed03da68d71c82612139b89df1e902}} 
+\index{bridge.image\_converter@{bridge.image\_converter}!publish\_velocity@{publish\_velocity}}
+\index{publish\_velocity@{publish\_velocity}!bridge.image\_converter@{bridge.image\_converter}}
+\doxysubsubsection{\texorpdfstring{publish\_velocity()}{publish\_velocity()}}
+{\footnotesize\ttfamily def bridge.\+image\+\_\+converter.\+publish\+\_\+velocity (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{error }\end{DoxyParamCaption})}
+
+
+
+Computes and publishes velocity commands based on the detected line position error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & The difference between the line position and the center of the image. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+enph353\+\_\+ros\+\_\+lab/node/bridge.\+py\end{DoxyCompactItemize}
